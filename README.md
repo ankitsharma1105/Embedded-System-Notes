@@ -1,5 +1,8 @@
-# Embedded-System-NNotes
-Question Bank                                                            Semester – 4 ❤❤😇😇
+# Embedded-System-Notes
+Question Bank                                                            Semester – 4 
+
+❤❤😇😇
+
 Chapter - 1
 1.	Compare CISC and RISC.
 2.	Compare CISC and RISC architecture.
