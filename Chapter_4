@@ -1,0 +1,139 @@
+Chapter:-  4.    Embeded System
+
+          ONLY 7 QUESTION KARNA HAI
+
+1....Compare Arduino variants in embeded system
+
+Arduino is a popular open-source electronics platform based on easy-to-use hardware and software. There are numerous variants of Arduino boards, each designed for specific applications and use cases in embedded systems
+When comparing Arduino variants specifically for embedded systems, it's essential to consider factors such as processing power, memory, I/O capabilities, power consumption, and connectivity options.
+
+1)Arduino Uno:
+
+Microcontroller: ATmega328P
+I/O Pins: 14 (6 PWM)
+Memory: 32 KB Flash, 2 KB RAM
+Use: Basic projects, education.
+
+2)Arduino Nano:
+
+Microcontroller: ATmega328P
+I/O Pins: 14 (6 PWM)
+Memory: 32 KB Flash, 2 KB RAM
+Use: Compact applications, wearables.
+
+3)Arduino Leonardo:
+
+Microcontroller: ATmega32U4
+I/O Pins: 20 (7 PWM)
+Memory: 32 KB Flash, 2.5 KB RAM
+Use: USB devices, human interface projects.
+
+4)Arduino Due:
+
+Microcontroller: SAM3X8E (ARM Cortex-M3)
+I/O Pins: 54 (12 PWM)
+Memory: 512 KB Flash, 96 KB RAM
+Use: High-performance applications.
+
+5)Arduino Zero:
+
+Microcontroller: SAMD21 Cortex-M0+
+I/O Pins: 14 (6 PWM)
+Memory: 256 KB Flash, 32 KB RAM
+Use: Advanced embedded applications.
+
+6)Arduino Pro Mini:
+
+Microcontroller: ATmega328P
+I/O Pins: 14 (6 PWM)
+Memory: 32 KB Flash, 2 KB RAM
+Use: Low-power, compact projects.
+
+
+
+
+
+2....	Explain the Arduino program structure.
+
+Comments: For explanations (single-line // or multi-line /* ... */).
+
+Global Variables: Declared outside functions for shared data.
+
+setup() Function: Initializes settings and runs once at startup.
+
+loop() Function: Contains the main code that runs continuously.
+
+Additional Functions: User-defined functions for organizing code.
+
+Libraries: Included with #include to extend functionality.
+
+Example structure :-
+ 
+ // Global variable
+int ledPin = 13;
+void setup() {
+    pinMode(ledPin, OUTPUT);
+}
+void loop() {
+    digitalWrite(ledPin, HIGH);
+    delay(1000);
+    digitalWrite(ledPin, LOW);
+    delay(1000);
+}
+
+
+
+3....List and explain digital I/O functions of        Arduino
+
+Arduino provides several digital I/O functions that allow you to interact with digital pins on the board. These functions enable you to read from and write to digital pins, which can be used for various applications such as controlling LEDs, reading button states, and interfacing 
+
+1)pinMode(pin, mode): 
+Configures a pin as INPUT, OUTPUT, or INPUT_PULLUP.
+Example: pinMode(13, OUTPUT);
+
+2)digitalWrite(pin, value): 
+Sets a pin to HIGH (on) or LOW (off).
+Example: digitalWrite(13, HIGH);
+
+3)analogWrite(pin, value): 
+Writes a PWM signal to a pin (simulates analog output).
+Example: analogWrite(9, 128); (50% duty cycle).
+
+4)digitalRead(pin):
+ Reads the state of a pin, returning HIGH or LOW.
+Example: int state = digitalRead(2);
+
+
+
+4...Write an Arduino program to blink an LED.
+
+// Define the pin number for the LED
+const int ledPin = 13; // Pin 13 is often used for the built-in LED
+
+// The setup function runs once when you press reset or power the board
+void setup() {
+  // Initialize the digital pin as an output
+  pinMode(ledPin, OUTPUT);
+}
+
+// The loop function runs over and over again forever
+void loop() {
+  digitalWrite(ledPin, HIGH); // Turn the LED on (HIGH is the voltage level)
+  delay(1000);                 // Wait for a second (1000 milliseconds)
+  digitalWrite(ledPin, LOW);  // Turn the LED off by making the voltage LOW
+  delay(1000);                 // Wait for a second
+}
+
+
+
+
+5....List and explain timer functions of Arduino.
+
+Arduino provides several timer functions that allow you to manage time-based operations in your sketches. These functions are essential for tasks such as creating delays, measuring time intervals, and scheduling events without blocking the main program flow.
+
+
+1)delay(ms): Pauses the program for a specified number of milliseconds. (Blocking)
+
+2)delayMicroseconds(us): Pauses the program for a specified number of microseconds. (Blocking)
+
+3)millis(): Returns the number of milliseconds since the program started. Useful for non-blocking timin
