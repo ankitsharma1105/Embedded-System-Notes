@@ -5,7 +5,7 @@
                   
 #                                      ❤❤ SEMESTER - 4 😇😇
                                      
-                                           Chapter - 1
+#                                           Chapter - 1
 
 
 1.	Compare CISC and RISC.
@@ -18,7 +18,7 @@
 8.	Explain the use of Pre-scalar.
 
 
-                                          Chapter – 2
+   #                                       Chapter – 2
 
 
 1.	What are the main features of ARM architecture?
@@ -32,7 +32,7 @@
 
 
 
-                                         Chapter – 3
+    #                                  Chapter – 3
   
 
 1.	Explain the Ethernet protocol.
@@ -43,7 +43,7 @@
 6.	Explain IR interfacing with microcontroller.
 
 
-                                         Chapter – 4
+   #                                      Chapter – 4
 
 
 1.	Compare Arduino variants.
@@ -57,21 +57,16 @@
 9.	List and explain any 5 extended libraries of Arduino.
 
 
-                                        Chapter – 5
+ #                                       Chapter – 5
 
 
 1.	Explain how to implement “Arduino based internet communication.
-
-      
-     
-
-
 
    
 3.	Draw and explain the interfacing of a pressure sensor with Arduino. Also write a program for the same.
 
 
-                                        Chapter – 6
+  #                                      Chapter – 6
 
 
 1.	Explain the Infrared protocol with transmitter and receiver.
