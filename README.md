@@ -2,8 +2,7 @@
 # QB 
 # Author By : @nkit 
                   
-
-                                     ❤❤ **SEMESTER - 4** 😇😇
+#                                      ❤❤ SEMESTER - 4 😇😇
                                      
                                            Chapter - 1
 
