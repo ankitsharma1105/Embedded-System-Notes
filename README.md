@@ -1,5 +1,4 @@
 # Embedded-System-Notes
-# /workspaces/Embedded-System-Notes/Chapter_5.
 # Author By : @nkit 
 # QB 
                   
