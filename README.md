@@ -1,4 +1,5 @@
 # Embedded-System-Notes
+# /workspaces/Embedded-System-Notes/Chapter_5.
 # Author By : @nkit 
 # QB 
                   
@@ -60,7 +61,14 @@
 
 
 1.	Explain how to implement “Arduino based internet communication.
-2.	Draw and explain the interfacing of a pressure sensor with Arduino. Also write a program for the same.
+
+      
+     
+
+
+
+   
+3.	Draw and explain the interfacing of a pressure sensor with Arduino. Also write a program for the same.
 
 
                                         Chapter – 6
