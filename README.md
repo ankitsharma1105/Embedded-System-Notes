@@ -1,5 +1,5 @@
 # Embedded-System-Notes
-# Author By : @nkit 
+# Author By : @Ankit 
 # QB 
                   
 #                                      ❤❤ SEMESTER - 4 😇😇
