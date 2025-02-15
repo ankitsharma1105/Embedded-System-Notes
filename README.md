@@ -30,8 +30,7 @@
 8.	Draw and explain the data flow model of ARM7.
 
 
-
-    #                                    Chapter – 3
+  #                                    Chapter – 3
   
 
 1.	Explain the Ethernet protocol.
