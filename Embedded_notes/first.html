@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded System </title>
+</head>
+<body>
+    <div class="container">
+        <div class="chap_6">
+            <div class="box_1">
+                <h2>Chapter : 6 </h2>
+                <p> 1.	Explain the Infrared protocol with transmitter and receiver.
+
+                    The Infrared (IR) protocol is a wireless communication method that uses infrared light to transmit data between a transmitter and a receiver.
+                    
+                    It is commonly used in remote controls, wireless data transfer, and short-range communication applications.
+                    
+                    Components
+                    
+                    Transmitter:
+                    Uses an IR LED to emit modulated infrared light.
+                    Encodes data into a specific format (e.g., binary) using modulation techniques like pulse-width modulation.
+                    
+                    Receiver:
+                    Utilizes an IR photodiode or phototransistor to detect the incoming IR light.
+                    Demodulates the signal to extract the original data and processes it for action.
+                    
+                    Communication Process:
+                    
+                    The transmitter encodes and emits a modulated IR signal.
+                    The receiver detects the IR light and converts it into an electrical signal.
+                    The receiver demodulates the signal to retrieve the original data and executes corresponding actions.
+                    
+                    Advantages:
+                    
+                    Low cost and simplicity.
+                    Not affected by radio frequency interference.
+                    
+                    Disadvantages:
+                    
+                    Requires line of sight and has a limited range (typically a few meters).
+                    Can be affected by strong ambient light.
+                    
+                    Applications:
+                    Commonly used in remote controls for TVs and other devices, as well as in short-range data transfer between devices.
+                    
+                    2.	Explain the Bluetooth interface with Arduino.
+                    
+                    The Bluetooth interface allows Arduino microcontrollers to communicate wirelessly with other Bluetooth-enabled devices, such as smartphones, tablets, or computers.
+                    
+                     This capability is useful for various applications, including remote control, data transfer, and IoT projects. 
+                    
+                    Components Needed:
+                    
+                    Arduino Board (e.g., Uno, Nano)
+                    Bluetooth Module (e.g., HC-05 or HC-06)
+                    Jumper Wires
+                    
+                    Wiring:
+                    
+                    VCC: Connect to Arduino 5V
+                    GND: Connect to Arduino GND
+                    TX: Connect to Arduino RX (Receive)
+                    RX: Connect to Arduino TX (Transmit, may need a voltage divider)
+                    
+                    Programming:
+                    
+                    Use the SoftwareSerial library for communication.
+                    
+                    Example :  code to send and receive data
+                     
+                    #include <SoftwareSerial.h>
+                    SoftwareSerial BTSerial(10, 11); // RX, TX
+                    
+                    void setup() {
+                        Serial.begin(9600);
+                        BTSerial.begin(9600);
+                    }
+                    
+                    void loop() {
+                        if (BTSerial.available()) Serial.write(BTSerial.read());
+                        if (Serial.available()) BTSerial.write(
+                    
+                    
+                    3.	Explain WIFI interface with Arduino.
+                    
+                    The Wi-Fi interface enables Arduino boards to connect to the internet or local networks, allowing for remote communication and IoT applications.
+                    
+                    Components Needed:
+                    
+                    Arduino Board (e.g., Uno, Mega)
+                    Wi-Fi Module (e.g., ESP8266, ESP32, or Wi-Fi Shield)
+                    
+                    Wiring (for ESP8266):
+                    
+                    VCC: Connect to Arduino 3.3V
+                    GND: Connect to Arduino GND
+                    TX: Connect to Arduino RX
+                    RX: Connect to Arduino TX (may need a voltage divider)
+                    
+                    Programming:
+                    
+                    Use the ESP8266WiFi or WiFi library.
+                    Example : code to connect to Wi-Fi
+                    
+                    #include <ESP8266WiFi.h>
+                    
+                    const char* ssid = "your_SSID";
+                    const char* password = "your_PASSWORD";
+                    
+                    void setup() {
+                        Serial.begin(115200);
+                        WiFi.begin(ssid, password);
+                        while (WiFi.status() != WL_CONNECTED) {
+                            delay(1000);
+                        }
+                    }
+                    void loop() {
+                        // Your code here
+                    } </p>
+
+            </div>
+
+        </div>
+        <div class="chap_4">
+            <div class="box_2">
+                <h2>chapter:4</h2>
+                <p>
+          
+          1....Compare Arduino variants in embeded system
+          
+          Arduino is a popular open-source electronics platform based on easy-to-use hardware and software. There are numerous variants of Arduino boards, each designed for specific applications and use cases in embedded systems
+          When comparing Arduino variants specifically for embedded systems, it's essential to consider factors such as processing power, memory, I/O capabilities, power consumption, and connectivity options.
+          
+          1)Arduino Uno:
+          
+          Microcontroller: ATmega328P
+          I/O Pins: 14 (6 PWM)
+          Memory: 32 KB Flash, 2 KB RAM
+          Use: Basic projects, education.
+          
+          2)Arduino Nano:
+          
+          Microcontroller: ATmega328P
+          I/O Pins: 14 (6 PWM)
+          Memory: 32 KB Flash, 2 KB RAM
+          Use: Compact applications, wearables.
+          
+          3)Arduino Leonardo:
+          
+          Microcontroller: ATmega32U4
+          I/O Pins: 20 (7 PWM)
+          Memory: 32 KB Flash, 2.5 KB RAM
+          Use: USB devices, human interface projects.
+          
+          4)Arduino Due:
+          
+          Microcontroller: SAM3X8E (ARM Cortex-M3)
+          I/O Pins: 54 (12 PWM)
+          Memory: 512 KB Flash, 96 KB RAM
+          Use: High-performance applications.
+          
+          5)Arduino Zero:
+          
+          Microcontroller: SAMD21 Cortex-M0+
+          I/O Pins: 14 (6 PWM)
+          Memory: 256 KB Flash, 32 KB RAM
+          Use: Advanced embedded applications.
+          
+          6)Arduino Pro Mini:
+          
+          Microcontroller: ATmega328P
+          I/O Pins: 14 (6 PWM)
+          Memory: 32 KB Flash, 2 KB RAM
+          Use: Low-power, compact projects.
+          
+          
+          
+          
+          
+          2....	Explain the Arduino program structure.
+          
+          Comments: For explanations (single-line // or multi-line /* ... */).
+          
+          Global Variables: Declared outside functions for shared data.
+          
+          setup() Function: Initializes settings and runs once at startup.
+          
+          loop() Function: Contains the main code that runs continuously.
+          
+          Additional Functions: User-defined functions for organizing code.
+          
+          Libraries: Included with #include to extend functionality.
+          
+          Example structure :-
+           
+           // Global variable
+          int ledPin = 13;
+          void setup() {
+              pinMode(ledPin, OUTPUT);
+          }
+          void loop() {
+              digitalWrite(ledPin, HIGH);
+              delay(1000);
+              digitalWrite(ledPin, LOW);
+              delay(1000);
+          }
+          
+          
+          
+          3....List and explain digital I/O functions of        Arduino
+          
+          Arduino provides several digital I/O functions that allow you to interact with digital pins on the board. These functions enable you to read from and write to digital pins, which can be used for various applications such as controlling LEDs, reading button states, and interfacing 
+          
+          1)pinMode(pin, mode): 
+          Configures a pin as INPUT, OUTPUT, or INPUT_PULLUP.
+          Example: pinMode(13, OUTPUT);
+          
+          2)digitalWrite(pin, value): 
+          Sets a pin to HIGH (on) or LOW (off).
+          Example: digitalWrite(13, HIGH);
+          
+          3)analogWrite(pin, value): 
+          Writes a PWM signal to a pin (simulates analog output).
+          Example: analogWrite(9, 128); (50% duty cycle).
+          
+          4)digitalRead(pin):
+           Reads the state of a pin, returning HIGH or LOW.
+          Example: int state = digitalRead(2);
+          
+          
+          
+          4...Write an Arduino program to blink an LED.
+          
+          // Define the pin number for the LED
+          const int ledPin = 13; // Pin 13 is often used for the built-in LED
+          
+          // The setup function runs once when you press reset or power the board
+          void setup() {
+            // Initialize the digital pin as an output
+            pinMode(ledPin, OUTPUT);
+          }
+          
+          // The loop function runs over and over again forever
+          void loop() {
+            digitalWrite(ledPin, HIGH); // Turn the LED on (HIGH is the voltage level)
+            delay(1000);                 // Wait for a second (1000 milliseconds)
+            digitalWrite(ledPin, LOW);  // Turn the LED off by making the voltage LOW
+            delay(1000);                 // Wait for a second
+          }
+          
+          
+          
+          
+          5....List and explain timer functions of Arduino.
+          
+          Arduino provides several timer functions that allow you to manage time-based operations in your sketches. These functions are essential for tasks such as creating delays, measuring time intervals, and scheduling events without blocking the main program flow.
+          
+          
+          1)delay(ms): Pauses the program for a specified number of milliseconds. (Blocking)
+          
+          2)delayMicroseconds(us): Pauses the program for a specified number of microseconds. (Blocking)
+          
+          3)millis(): Returns the number of milliseconds since the program started. Useful for non-blocking timin</p>
+ 
+            </div>
+        </div>
+        <div class="chap_5">
+            <div class="box_3">
+                <h2>Chapter:5</h2>
+                <p>
+                    Explain how to implement “Arduino based internet communication.
+                    Ans: Arduino-Based Internet Communication: Quick Notes
+                
+                    1. Hardware Requirements:
+                    
+                    Arduino Board: (e.g., Arduino Uno, Mega, or Nano)
+                    Communication Module:
+                    Ethernet Shield: For wired connections.
+                    WiFi Module (ESP8266/ESP32): For wireless connections.
+                    GSM Module: For cellular communication.
+                    
+                    2. Software Requirements:
+                    
+                    Arduino IDE: Install the latest version.
+                    Libraries: Include necessary libraries:
+                    Ethernet.h for Ethernet.
+                    ESP8266WiFi.h or WiFi.h for ESP32.
+                    GSM.h for GSM modules.
+                    
+                    3. Setup Steps:
+                    
+                    Connect Hardware: Attach the communication module to the Arduino.
+                    Configure Network: Set up static IP (optional) or WiFi credentials.
+                    
+                    4. Testing:
+                    
+                    Access the Arduino's IP address in a web browser to see the response.
+                    
+                    6. Data Communication:
+                    
+                    Use HTTP requests (GET/POST) to send and receive data.
+                    
+                    7. Advanced Options:
+                    
+                    Consider using MQTT for IoT applications or WebSocket for real-time communication.
+                    
+                    8. Security:
+                    
+                    Implement HTTPS and authentication for secure data transmission.
+                    
+                    Draw and explain the interfacing of a pressure sensor with Arduino. Also write a program for the same.
+                    Ans:
+                    </p>
+                    <p>Draw and explain the interfacing of a pressure sensor with Arduino. Also write a program for the same.
+                        <!-- <img src="/workspaces/Embedded-System-Notes/image.png" alt=""> -->
+                    </p>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

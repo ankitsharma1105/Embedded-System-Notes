@@ -64,7 +64,6 @@
    
 3.	Draw and explain the interfacing of a pressure sensor with Arduino. Also write a program for the same.
 
-
   #                                      Chapter – 6
 
 
