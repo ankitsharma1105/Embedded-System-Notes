@@ -4,7 +4,7 @@
                   
 #                                      ❤❤ SEMESTER - 4 😇😇
                                      
-#                                           Chapter - 1
+#                                          Chapter - 1
 
 
 1.	Compare CISC and RISC.
@@ -31,7 +31,7 @@
 
 
 
-    #                                  Chapter – 3
+    #                                    Chapter – 3
   
 
 1.	Explain the Ethernet protocol.
