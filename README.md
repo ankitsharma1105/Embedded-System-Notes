@@ -16,7 +16,7 @@
 7.	Explain I/O port pins and multiplexed function of port 
 8.	Explain the use of Pre-scalar.
 
- #                                         Chapter – 2
+#                                         Chapter – 2
 
 
 1.	What are the main features of ARM architecture?
