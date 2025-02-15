@@ -42,7 +42,7 @@
 6.	Explain IR interfacing with microcontroller.
 
 
-   #                                      Chapter – 4
+   #                                     Chapter – 4
 
 
 1.	Compare Arduino variants.
@@ -56,7 +56,7 @@
 9.	List and explain any 5 extended libraries of Arduino.
 
 
- #                                       Chapter – 5
+ #                                      Chapter – 5
 
 
 1.	Explain how to implement “Arduino based internet communication.
